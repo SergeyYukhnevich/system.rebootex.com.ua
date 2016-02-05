@@ -1,0 +1,35 @@
+{
+  "name": "system.rebootex.com.ua",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.14.2",
+    "connect-mongo": "^1.1.0",
+    "cookie-parser": "^1.4.1",
+    "crypto": "0.0.3",
+    "ejs": "^2.3.4",
+    "ejs-locals": "^1.0.2",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "i18n": "^0.5.0",
+    "mongoose": "^4.3.6",
+    "nconf": "^0.8.2",
+    "serve-favicon": "^2.3.0",
+    "validator": "^4.5.0",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {
+    "yuicompressor": "^2.4.8"
+  },
+  "author": "Sergey Yuhnevich <yuhnevic@gmail.com>",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergeyYukhnevich/system.rebootex.com.ua.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "4.2.3"
+  }
+}

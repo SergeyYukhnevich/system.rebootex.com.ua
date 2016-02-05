@@ -1,0 +1,29 @@
+{
+  "port": 3001,
+  "i18n": {
+    "cookie": "lang",
+    "defaultLocale": "uk",
+    "directory": "./locales",
+    "locales": ["uk", "ru"],
+    "objectNotation": true
+  },
+  "mongoose": {
+    "uri": "mongodb://localhost:27017/rebootexSystem",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "RebootexSystem",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}

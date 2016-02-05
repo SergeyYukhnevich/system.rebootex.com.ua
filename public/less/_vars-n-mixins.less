@@ -1,0 +1,30 @@
+// Variables
+@black: #333;
+@grey: #7d7e7e;
+@blue: #009ECA;
+@green: #8cc249;
+@white: #fff;
+@base-color: @black;
+@base-font-family: 'Open Sans', sans-serif;
+@base-font-size: 14px;
+@base-font-weight: 300;
+
+// Mixins
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-sizing(@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
+}
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.no-outline() {
+  outline: none !important;
+}

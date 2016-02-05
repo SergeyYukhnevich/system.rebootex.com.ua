@@ -1,0 +1,26 @@
+<%
+    if (!isPjax) {
+        layout('./index')
+    }
+%>
+<!-- BEGIN LOGIN FORM -->
+<form class="login-form" action="/login" method="post">
+    <h3 class="form-title font-blue">Вход</h3>
+    <div class="alert alert-danger hidden" id="error-container">
+        <button class="close" data-close="alert">&times;</button>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" autocomplete="off" placeholder="Логин" name="username" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="password" autocomplete="off" placeholder="Пароль" name="password" />
+    </div>
+    <div class="form-actions">
+        <label class="remember-me check">
+            <input type="checkbox" name="remember" />Запомнить меня
+        </label>
+        <a href="/login/forget-password" class="forget-password" data-pjax=".content">Забыли пароль?</a>
+    </div>
+    <button type="submit" class="btn blue sign-in-btn">Войти</button>
+</form>
+<!-- END LOGIN FORM -->

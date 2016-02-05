@@ -1,0 +1,7 @@
+# Ignore node modules
+/node_modules/**
+/.idea/**
+/public/lib/**
+*.zip
+*.rar
+*.tar*

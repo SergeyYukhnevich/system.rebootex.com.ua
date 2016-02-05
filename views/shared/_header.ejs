@@ -1,0 +1,129 @@
+<header class="page-header">
+    <nav class="navbar mega-menu" role="navigation">
+        <div class="container-fluid">
+            <div class="clearfix navbar-fixed-top">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="toggle-icon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </span>
+                </button>
+                <!-- End Toggle Button -->
+                <!-- BEGIN LOGO -->
+                <a id="index" class="page-logo" href="/">
+                    <img src="img/system-35.png" alt="Rebootex System">
+                </a>
+                <!-- END LOGO -->
+                <!-- BEGIN TOPBAR ACTIONS -->
+                <div class="topbar-actions">
+                    <!-- BEGIN GROUP INFORMATION -->
+                    <div class="btn-group-red btn-group">
+                        <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                        <ul class="dropdown-menu-v2" role="menu">
+                            <li>
+                                <a href="/create-user">Создать пользователя</a>
+                            </li>
+                            <li>
+                                <a href="/new-order">Новый заказ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END GROUP INFORMATION -->
+                    <!-- BEGIN USER PROFILE -->
+                    <div class="btn-group-img btn-group">
+                        <a href="/profile" class="btn btn-sm">
+                            <span>Привет <%= user.get('fullname') %></span>
+                            <img src="img/avatar.png" alt="Avatar">
+                        </a>
+                    </div>
+                    <!-- END USER PROFILE -->
+                    <!-- BEGIN LOGOUT BUTTON -->
+                    <button type="button" class="logout quick-sidebar-toggler">
+                        <i class="icon-logout"></i>
+                    </button>
+                    <!-- END LOGOUT BUTTON -->
+                </div>
+                <!-- END TOPBAR ACTIONS -->
+            </div>
+            <!-- BEGIN HEADER MENU -->
+            <div class="nav-collapse collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <% if (user.get('role') == 'super admin') { %>
+                        <li>
+                            <a href="/" class="text-uppercase">
+                                <i class="icon-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown-fw">
+                            <a href="javascript:;" class="text-uppercase">
+                                <i class="icon-wrench"></i>
+                                Сервис
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-fw">
+                                <li>
+                                    <a href="/service/reception">
+                                        <i class="icon-note"></i>
+                                        Приёмка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/service/workshop">
+                                        <i class="icon-settings"></i>
+                                        Мастерская
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/service/readystage">
+                                        <i class="icon-rocket"></i>
+                                        Выдача
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/service/archive">
+                                        <i class="icon-drawar"></i>
+                                        Архив
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/" class="text-uppercase">
+                                <i class="icon-home"></i>
+                                Финансы
+                            </a>
+                        </li>
+                    <% } else if (user.get('role') == 'admin') { %>
+                        <li class="active open selected">
+                            <a href="/" class="text-uppercase">
+                                <i class="icon-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                    <% } else if (user.get('role') == 'employee') { %>
+                        <li class="active open selected">
+                            <a href="/" class="text-uppercase">
+                                <i class="icon-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                    <% } else if (user.get('role') == 'customer') { %>
+                        <li class="active open selected">
+                            <a href="/" class="text-uppercase">
+                                <i class="icon-home"></i>
+                                Главная
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- END HEADER MENU -->
+        </div>
+        <!--/container-->
+    </nav>
+</header>

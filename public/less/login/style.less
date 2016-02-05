@@ -1,0 +1,154 @@
+/***
+Login page
+***/
+
+// Variables
+@import url(../_vars-n-mixins);
+
+.login {
+  background-color: #2F373E;
+  .logo {
+    margin: 60px auto 0;
+    padding: 15px;
+    text-align: center;
+  }
+  .content {
+    background-color: #eceef1;
+    .radius(7px);
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 10px 30px 30px;
+    position: relative;
+    width: 400px;
+    h3 {
+      font-size: 28px;
+    }
+    h4 {
+      color: #555;
+    }
+    .form-title {
+      font-weight: 300;
+      margin-bottom: 25px;
+    }
+    .hint {
+      color: #999;
+      margin: 15px 0 7px 0;
+      padding: 0;
+    }
+    .login-form,
+    .forget-form {
+      margin: 0;
+      padding: 0;
+    }
+    .form-control {
+      background-color: #dde3ec;
+      border: 1px solid #dde3ec;
+      color: #8290a3;
+      height: 43px;
+      &:focus,
+      &:active {
+        border: 1px solid #c3ccda;
+      }
+      &::-moz-placeholder {
+        color: #8290a3;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: #8290a3;
+      }
+      &::-webkit-input-placeholder {
+        color: #8290a3;
+      }
+    }
+    select.form-control {
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+    .form-group.has-error .form-control {
+      &,
+      &:focus,
+      &:active {
+        background-color: fade(#E26A6A, 30%);
+        border-color: #a94442;
+      }
+    }
+    .btn {
+      font-weight: 600;
+      margin-top: 1px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+    }
+    .form-actions {
+      clear: both;
+      border: 0;
+      border-bottom: 1px solid #eee;
+      padding: 0 0 20px;
+      .checkbox {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+    .forget-form {
+      .form-actions {
+        border: 0;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+      }
+    }
+    .forget-password {
+      font-size: 14px;
+      float: right;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .check {
+      color: #8290a3;
+    }
+    .remember-me {
+      margin-top: 10px;
+    }
+    .sign-in-btn {
+      .radius(0 0 7px 7px);
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 -30px -30px;
+      padding: 15px 0 17px 0;
+      text-align: center;
+      text-decoration: none;
+      width: 400px;
+    }
+  }
+  .copyright {
+    color: #7a8ca5;
+    font-size: 13px;
+    margin: 0 auto 30px 0;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .login {
+    .logo {
+      margin-top: 10px;
+    }
+    .content {
+      width: 320px;
+      margin-top: 10px;
+      h3 {
+        font-size: 22px;
+      }
+      .sign-in-btn {
+        width: 320px;
+      }
+    }
+    .forget-password {
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .checkbox {
+      font-size: 13px;
+    }
+  }
+}
